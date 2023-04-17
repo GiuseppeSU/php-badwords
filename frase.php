@@ -2,6 +2,8 @@
     $frase = $_GET['frase'];
     $wrong = $_GET['wrong'];
     $unione = "$frase $wrong";
+
+    echo $unione .strlen($unione);
 ?>
 
 <!DOCTYPE html>
