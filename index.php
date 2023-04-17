@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<form method="GET" action="frasi.php">
+<form method="GET" action="frase.php">
 
         <label for="nome">Inserisci frase: </label>
         <textarea name="frase" id="frase" cols="30" rows="10"></textarea>
