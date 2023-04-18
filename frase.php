@@ -1,12 +1,9 @@
 <?php
     $frase = $_GET['frase'];
     $parola = $_GET['parola'];
-    $unione = "$frase $parola";
-    $risultato = 'La stringa è lunga: ' . strlen($unione);
-    
-    $parola2 = str_replace($parola,"***",$parola);
-    $unione2 = "$frase $parola2";
-    $risultato2 =  'La stringa è lunga: ' . strlen($unione2);
+
+    $parolaCensurata =str_ireplace($parola,"***",$frase)
+ 
     
 ?>
 
@@ -28,8 +25,8 @@
                 <div class="card w-75">
                     <h5 class="card-header">Frase senza censure</h5>
                     <div class="card-body">
-                        <h1 class="card-title"><?php echo $unione; ?></h1>
-                        <p class="card-text"><?php echo $risultato; ?></p>
+                        <p class="card-text"><?php echo strlen($frase) . "-" .'caratteri'; ?></p>
+                        <p class="card-text"><?php echo $frase; ?></p>
                     </div>
                 </div>
             </div>
@@ -38,8 +35,8 @@
                 <div class="card w-75">
                     <h5 class="card-header">Frase con censure</h5>
                     <div class="card-body">
-                        <h1 class="card-title"><?php echo $unione2; ?></h1>
-                        <p class="card-text"><?php echo $risultato2; ?></p>
+                        <p class="card-text"><?php echo  strlen($parolaCensurata) . "-" .'caratteri'; ?></p>
+                        <p class="card-text"><?php echo $parolaCensurata; ?></p>
                     </div>
                 </div>
             </div>
